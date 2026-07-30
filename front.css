@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body{
+    background-color: #0A1124;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 45px;
+    list-style-type: none;
+    border-bottom: 0.4px solid white;
+}
+
+.logo{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navLinks{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    /* background-color: rgb(205, 131, 21); */
+}
+
+.navLinks li{
+    cursor: pointer;
+}
+
+.syLogin{
+    display: flex;
+    gap: 22px;
+}
+
+.syLogin button{
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login{
+    background-color: #0A1124;
+    color: white;
+    border: 0.7px solid white;
+}
+
+.signin{
+    background-color: #6254EA;
+    color: white;
+    border: none;
+}
+
+.headingLines{
+    /* background-color: coral; */
+    /* height: 50vh; */
+    padding: 80px 0px 35px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    gap: 15px;
+}
+
+.headingLines p{
+    font-size: 14px;
+    color: grey;
+}
+
+.start{
+    text-align: center;
+}
+
+.start button{
+    font-size: 20px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #6254EA;
+    color: white;
+}
