@@ -18,6 +18,7 @@ nav{
     padding: 20px 45px;
     list-style-type: none;
     border-bottom: 0.4px solid white;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
 }
 
 .logo{
@@ -54,10 +55,24 @@ nav{
     border: 0.7px solid white;
 }
 
+.login:hover{
+    box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.5);
+}
+
 .signin{
     background-color: #6254EA;
     color: white;
     border: none;
+    box-sizing: border-box;
+}
+
+.signin:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 18px rgb(55, 42, 171);
+}
+
+.signin:active{
+    transform: scale(0.9);
 }
 
 .headingLines{
@@ -78,7 +93,19 @@ nav{
 }
 
 .start{
+    height: 45px;
+    /* display: flex; */
     text-align: center;
+    box-sizing: border-box;
+}
+
+.start button:hover{
+    border: 1px solid white;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+.start:active{
+    transform: scale(0.9);
 }
 
 .start button{
@@ -89,4 +116,53 @@ nav{
     border: none;
     background-color: #6254EA;
     color: white;
+}
+
+
+/*advertisement cards*/
+.adCards{
+    margin-top: 15vh;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    padding: 0px 60px;
+}
+
+.adCard{
+    background-color: rgba(22, 34, 55, 0.84);
+    width: 23vw;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 12px;
+    /* line-height: 30px; */
+    border: 1px solid white;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+
+}
+
+.adCard div{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(169, 169, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.adCard div i{
+    font-size: 20px;
+}
+
+.adCard h2{
+    font-size: 27px;
+    font-weight: 550;
+}
+
+.adCard p{
+    color: grey;
+    font-size: 14px;
 }
