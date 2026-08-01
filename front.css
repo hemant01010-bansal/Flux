@@ -75,6 +75,14 @@ nav{
     transform: scale(0.9);
 }
 
+.headBar{
+    display: none;
+}
+
+.sideBar{
+    /* display: none; */
+}
+
 .headingLines{
     /* background-color: coral; */
     /* height: 50vh; */
@@ -165,4 +173,35 @@ nav{
 .adCard p{
     color: grey;
     font-size: 14px;
+}
+
+
+/*Code for responsiveness*/
+@media (max-width: 425px) {
+    nav{
+        padding: 20px 30px;
+    }
+
+    .navLinks, .syLogin{
+        display: none;
+    }
+
+    .headBar{
+        display: inline;
+        font-size: 25px;
+    }
+
+    .headingLines{
+        padding: 80px 20px 35px 20px;
+        gap: 25px;
+        font-size: 28px;
+    }
+
+    .adCards{
+        flex-direction: column;
+    }
+
+    .adCard{
+        width: 64vw;
+    }
 }
