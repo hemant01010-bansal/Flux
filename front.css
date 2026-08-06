@@ -10,6 +10,45 @@ body{
     color: white;
 }
 
+.sideBar{
+    height: 100vh;
+    display: none;
+}
+
+.sideBarHead{
+    height: 80px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideBarHead p{
+    font-size: 30px;
+}
+
+.sideBarLinks{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0px 25px 30px 25px;
+    font-size: 30px;
+    font-weight: 100;
+    border-bottom: 1px solid rgb(78, 91, 112);
+}
+
+.sideBarsyLogin{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 25px 0px 25px;
+    gap: 15px;
+}
+
+.sideBarsyLogin button{
+    padding: 15px 0px;
+    border-radius: 8px;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -79,14 +118,10 @@ nav{
     display: none;
 }
 
-.sideBar{
-    /* display: none; */
-}
-
 .headingLines{
     /* background-color: coral; */
     /* height: 50vh; */
-    padding: 80px 0px 35px 0px;
+    padding: 140px 0px 180px 0px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -129,11 +164,12 @@ nav{
 
 /*advertisement cards*/
 .adCards{
-    margin-top: 15vh;
+    margin-top: 120px;
     display: flex;
     gap: 25px;
     justify-content: space-between;
     padding: 0px 60px;
+    margin-bottom: 100px;
 }
 
 .adCard{
@@ -176,8 +212,102 @@ nav{
 }
 
 
+.feature{
+
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    min-height:200vh;
+}
+
+
+/* LEFT */
+
+.left{
+    display:flex;
+    flex-direction:column;
+    gap:300px;
+    padding-top:120px;
+    padding-bottom:120px;
+}
+
+.content{
+
+    /* max-width:520px; */
+}
+
+.small-heading{
+    color:#6d7cff;
+    font-size:15px;
+    letter-spacing:2px;
+    font-weight:600;
+}
+
+.content h1{
+    font-size:64px;
+    line-height:1.1;
+    margin:25px 0;
+    font-weight:700;
+}
+
+.content p{
+    color:#9fa8c8;
+    font-size:22px;
+    line-height:1.8;
+}
+
+
+/* RIGHT */
+
+.right{
+    /* position:relative; */
+}
+
+.sticky{
+    position:sticky;
+    top:80px;
+    display:flex;
+    flex-direction:column;
+    gap:60px;
+    padding-top:80px;
+}
+
+
+/* Glass Cards */
+
+.sticky img{
+    width:100%;
+    border-radius:22px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#111b38;
+    /* box-shadow:
+        0 15px 60px rgba(0,0,0,.45),
+        inset 0 0 0 1px rgba(255,255,255,.05); */
+    /* transition:.4s; */
+}
+
+
+/* Responsive */
+
+@media(max-width:700px){
+    .feature{
+        display: block;
+    }
+
+    .left{
+        gap: 150px;
+    }
+
+    .right{
+        display: none;
+    }
+}
+
+
 /*Code for responsiveness*/
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     nav{
         padding: 20px 30px;
     }
@@ -199,9 +329,10 @@ nav{
 
     .adCards{
         flex-direction: column;
+        padding: auto;
     }
 
     .adCard{
-        width: 64vw;
+        width: auto;
     }
 }
