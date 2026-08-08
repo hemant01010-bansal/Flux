@@ -20,7 +20,7 @@
     <!-- full screen bar for small width devices and display none for laptops width -->
     <div class="sideBar">
         <div class="sideBarHead">
-            <a href="front.html">Flux</a>
+            <a href="front.html"><img src="logo.jpg" alt="Flux" class="logo"></a>
             <div class="sideBarClose">
                 <i class="fa-solid fa-xmark" style="color: rgb(255, 255, 255);"></i>
             </div>
@@ -42,7 +42,7 @@
 
     <!-- nav bar for laptops width and display none for small width devices -->
     <nav>
-        <div class="logo"><a href="front.html">Flux</a></div>
+        <div class="logo"><a href="front.html"><img src="logo.jpg" alt="Flux" class="logo"></a></div>
         <div class="navLinks">
             <a href="#">About</a>
             <a href="#">Help</a>
@@ -72,37 +72,39 @@
 
         <section class="feature">
 
-    <div class="feature-item">
-        <div class="content">
-            <span class="small-heading">FOCUS ON WHAT'S IMPORTANT</span>
-            <h1>Stay organized and focused</h1>
-            <p>
-                Achieve mental clarity by sorting tasks into Today,
-                Upcoming, or custom filters. Focus only on what
-                matters at the right moment.
-            </p>
-        </div>
-        <div class="image">
-            <img src="https://images.unsplash.com/photo-1758640920659-0bb864175983?w=600&h=450&auto=format&fit=crop&q=60" alt="Task organization app">
-        </div>
-    </div>
+            <div class="feature-item">
+                <div class="content">
+                    <span class="small-heading">FOCUS ON WHAT'S IMPORTANT</span>
+                    <h1>Stay organized and focused</h1>
+                    <p>
+                        Achieve mental clarity by sorting tasks into Today,
+                        Upcoming, or custom filters. Focus only on what
+                        matters at the right moment.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1758640920659-0bb864175983?w=600&h=450&auto=format&fit=crop&q=60"
+                        alt="Task organization app">
+                </div>
+            </div>
 
-    <div class="feature-item reverse">
-        <div class="image">
-            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&auto=format&fit=crop&q=60" alt="Weekly planning calendar">
-        </div>
-        <div class="content">
-            <span class="small-heading">PLAN WITH CONFIDENCE</span>
-            <h1>Simplify your planning</h1>
-            <p>
-                Plan your entire week using an intuitive calendar,
-                recurring tasks and reminders. Never miss what
-                matters again.
-            </p>
-        </div>
-    </div>
+            <div class="feature-item reverse">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&auto=format&fit=crop&q=60"
+                        alt="Weekly planning calendar">
+                </div>
+                <div class="content">
+                    <span class="small-heading">PLAN WITH CONFIDENCE</span>
+                    <h1>Simplify your planning</h1>
+                    <p>
+                        Plan your entire week using an intuitive calendar,
+                        recurring tasks and reminders. Never miss what
+                        matters again.
+                    </p>
+                </div>
+            </div>
 
-</section>
+        </section>
 
 
         <!-- 3 cards highlights some feature of our product -->
@@ -127,6 +129,62 @@
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <img src="logo.jpg" alt="Flux" class="logo">
+                <p class="footer-tagline">
+                    Stay organized, plan with confidence, and focus
+                    on what matters most — every single day.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Integrations</a>
+                    <a href="#">Changelog</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Community</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Flux. All rights reserved.</p>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <script src="front.js"></script>
 </body>
