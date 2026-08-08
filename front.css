@@ -5,11 +5,20 @@
     font-optical-sizing: auto;
 }
 
+
+ /*css for all anchor , body tags*/
+a{
+    text-decoration: none;
+    color: white;
+}
+
 body{
     background-color: #0A1124;
     color: white;
 }
 
+
+/* css for small width nav bar which takes full screen and not displayed for laptops width */
 .sideBar{
     height: 100vh;
     display: none;
@@ -49,6 +58,8 @@ body{
     border-radius: 8px;
 }
 
+
+/* css for laptop's width nav bar */
 nav{
     display: flex;
     justify-content: space-between;
@@ -73,8 +84,18 @@ nav{
     /* background-color: rgb(205, 131, 21); */
 }
 
-.navLinks li{
-    cursor: pointer;
+.navLinks a{
+    padding: 5px;
+}
+
+.navLinks a:hover{
+    color: blue;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.navLinks a:active{
+    color: red;
 }
 
 .syLogin{
@@ -118,6 +139,8 @@ nav{
     display: none;
 }
 
+
+/* css for interactive lines */
 .headingLines{
     /* background-color: coral; */
     /* height: 50vh; */
@@ -140,11 +163,12 @@ nav{
     /* display: flex; */
     text-align: center;
     box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 .start button:hover{
-    border: 1px solid white;
-    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 18px rgb(55, 42, 171);
 }
 
 .start:active{
@@ -162,6 +186,94 @@ nav{
 }
 
 
+
+/* css for para text & images which tells about our webpage */
+.feature {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    padding: 100px 0;
+}
+
+.feature-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.small-heading {
+    color: #6d7cff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.content h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 25px 0;
+    font-weight: 700;
+}
+
+.content p {
+    color: #9fa8c8;
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.image img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    background: #111b38;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+    .feature {
+        gap: 80px;
+        padding: 60px 0;
+    }
+
+    .feature-item,
+    .feature-item.reverse {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .feature-item .image {
+        order: -1;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .reverse{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 32px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}
+
+
 /*advertisement cards*/
 .adCards{
     margin-top: 120px;
@@ -175,7 +287,7 @@ nav{
 .adCard{
     background-color: rgba(22, 34, 55, 0.84);
     width: 23vw;
-    height: 120px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -211,87 +323,27 @@ nav{
     font-size: 14px;
 }
 
-
-.feature{
-
-    width:90%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    min-height:200vh;
-}
-
-
-/* LEFT */
-
-.left{
-    display:flex;
-    flex-direction:column;
-    gap:300px;
-    padding-top:120px;
-    padding-bottom:120px;
-}
-
-.content{
-
-    /* max-width:520px; */
-}
-
-.small-heading{
-    color:#6d7cff;
-    font-size:15px;
-    letter-spacing:2px;
-    font-weight:600;
-}
-
-.content h1{
-    font-size:64px;
-    line-height:1.1;
-    margin:25px 0;
-    font-weight:700;
-}
-
-.content p{
-    color:#9fa8c8;
-    font-size:22px;
-    line-height:1.8;
-}
-
-
-/* RIGHT */
-
-.right{
-    /* position:relative; */
-}
-
-.sticky{
-    position:sticky;
-    top:80px;
-    display:flex;
-    flex-direction:column;
-    gap:60px;
-    padding-top:80px;
-}
-
-
-/* Glass Cards */
-
-.sticky img{
-    width:100%;
-    border-radius:22px;
-    border:1px solid rgba(255,255,255,.08);
-    background:#111b38;
-    /* box-shadow:
-        0 15px 60px rgba(0,0,0,.45),
-        inset 0 0 0 1px rgba(255,255,255,.05); */
-    /* transition:.4s; */
-}
-
-
 /* Responsive */
 
 @media(max-width:700px){
+    nav{
+        padding: 20px 30px;
+    }
+
+    .navLinks, .syLogin{
+        display: none;
+    }
+
+    .headBar{
+        display: inline;
+        font-size: 25px;
+    }
+
+    .headingLines{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .feature{
         display: block;
     }
@@ -302,6 +354,15 @@ nav{
 
     .right{
         display: none;
+    }
+
+    .adCards{
+        flex-direction: column;
+        padding: auto;
+    }
+
+    .adCard{
+        width: auto;
     }
 }
 
