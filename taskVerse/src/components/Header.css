@@ -1,0 +1,138 @@
+/* css for small width nav bar which takes full screen and not displayed for laptops width */
+.sideBar{
+    height: 100vh;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+.sideBarHead{
+    height: 80px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideBarHead p{
+    font-size: 30px;
+}
+
+.sideBarLinks{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0px 25px 30px 25px;
+    font-size: 30px;
+    font-weight: 100;
+    border-bottom: 1px solid rgb(78, 91, 112);
+}
+
+.sideBarsyLogin{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 25px 0px 25px;
+    gap: 15px;
+}
+
+.sideBarsyLogin button{
+    padding: 15px 0px;
+    border-radius: 8px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 45px;
+    list-style-type: none;
+    border-bottom: 0.4px solid white;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+.logo{
+    height: 42px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navLinks{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    /* background-color: rgb(205, 131, 21); */
+}
+
+.navLinks a{
+    padding: 5px;
+}
+
+.navLinks a:hover{
+    color: blue;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.navLinks a:active{
+    color: red;
+}
+
+.syLogin{
+    display: flex;
+    gap: 22px;
+}
+
+.syLogin button{
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login{
+    background-color: #0A1124;
+    color: white;
+    border: 0.7px solid white;
+}
+
+.login:hover{
+    box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.5);
+}
+
+.signin{
+    background-color: #6254EA;
+    color: white;
+    border: none;
+    box-sizing: border-box;
+}
+
+.signin:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 18px rgb(55, 42, 171);
+}
+
+.signin:active{
+    transform: scale(0.9);
+}
+
+.headBar{
+    display: none;
+}
+
+
+@media (max-width: 768px){
+    nav{
+        padding: 20px 30px;
+    }
+    
+    .navLinks, .syLogin{
+        display: none;
+    }
+
+    .headBar{
+        display: inline;
+        font-size: 25px;
+    }
+}
