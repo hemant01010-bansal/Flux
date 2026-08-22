@@ -1,0 +1,146 @@
+.blogSection {
+    min-height: 100vh;
+    background-color: #080f24;
+    color: white;
+    padding: 100px 10%;
+}
+
+
+/* HEADER */
+
+.blogHeader {
+    max-width: 750px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.blogTag {
+    color: #6d63ff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.blogHeader h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin: 0 0 25px;
+}
+
+.blogHeader .blogDescription {
+    color: #9ba9c7;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* BLOG CONTAINER */
+
+.blogContainer {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+
+/* BLOG CARD */
+
+.blogCard {
+    background-color: #10182f;
+    border: 1px solid #202b48;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.blogCard:hover {
+    border-color: #6d63ff;
+}
+
+
+/*  IMAGE  */
+
+.blogImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* CONTENT */
+
+.blogContent {
+    padding: 28px;
+}
+
+.blogCategory {
+    color: #6d63ff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.blogContent h2 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.blogContent .blogDescription {
+    color: #9ba9c7;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/*FOOTER  */
+
+.blogFooter {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogFooter span {
+    color: #71809f;
+    font-size: 14px;
+}
+
+.blogFooter button {
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.blogFooter button:hover {
+    color: #6d63ff;
+}
+
+
+/*  RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .blogSection {
+        padding: 70px 6%;
+    }
+
+    .blogHeader h1 {
+        font-size: 42px;
+    }
+
+    .blogContainer {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,58 @@
+
+/* css for interactive lines */
+.headingLines{
+    /* background-color: coral; */
+    /* height: 50vh; */
+    padding: 140px 0px 180px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    gap: 15px;
+}
+
+.headingLines p{
+    font-size: 14px;
+    color: grey;
+}
+
+.start{
+    height: 45px;
+    /* display: flex; */
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.start button:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 18px rgb(55, 42, 171);
+}
+
+.start:active{
+    transform: scale(0.9);
+}
+
+.start button{
+    font-size: 20px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #6254EA;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .headBar{
+        display: inline;
+        font-size: 25px;
+    }
+
+    .headingLines{
+        padding: 80px 20px 35px 20px;
+        gap: 25px;
+        font-size: 28px;
+    }
+}

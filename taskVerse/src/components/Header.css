@@ -71,8 +71,7 @@ nav{
 }
 
 .navLinks a:hover{
-    color: blue;
-    background-color: azure;
+    color: rgb(74, 74, 253);
     border-radius: 5px;
 }
 
@@ -135,4 +134,8 @@ nav{
         display: inline;
         font-size: 25px;
     }
+}
+
+.onPageLinkActive{
+    color: rgb(74, 74, 253);
 }
