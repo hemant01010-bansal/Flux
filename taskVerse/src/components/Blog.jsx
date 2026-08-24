@@ -3,16 +3,7 @@ import "./Blog.css";
 
 function Blog({ blogs }) {
     return (
-        <section className="blogSection">
-            <div className="blogHeader">
-                <p className="blogTag">FROM THE FLUX BLOG</p>
-                <h1>Ideas to help you<br />stay focused.</h1>
-                <p className="blogDescription">
-                    Practical tips, ideas, and insights to help you
-                    organize your work and make the most of your time.
-                </p>
-            </div>
-
+            
             <div className="blogContainer">
                 {blogs.map((blog) => (
                     <article className="blogCard" key={blog.id}>
@@ -43,7 +34,6 @@ function Blog({ blogs }) {
 
             </div>
 
-        </section>
     );
 }
 

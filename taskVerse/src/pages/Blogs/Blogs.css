@@ -1,0 +1,70 @@
+.blogHeader {
+    padding: 200px 10% 0;
+    max-width: 750px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.blogTag {
+    color: #6d63ff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.blogHeader h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin: 0 0 25px;
+}
+
+.blogHeader .blogDescription {
+    color: #9ba9c7;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.search{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.search input{
+    height: 45px;
+    width: 40%;
+    min-width: 280px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.search input:focus{
+    box-shadow: 3px 3px 5px #6254EA, -3px -3px 5px #6254EA;
+    border: none;
+    outline: none;
+}
+
+.search input::placeholder {
+    color: #666;
+}
+
+.noOfBlogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 60%; */
+/* background-color: azure; */
+    /* max-width: 800px; */
+    margin: 20px auto 0;
+    color: #aeb8d0;
+    font-size: 20px;
+}
+
+.noOfBlogs p {
+    margin: 0;
+}
