@@ -7,26 +7,15 @@ function Blog({ blogs }) {
             <div className="blogContainer">
                 {blogs.map((blog) => (
                     <article className="blogCard" key={blog.id}>
-                        <img
-                            src={blog.image}
+                        <img src={blog.image}
                             alt={blog.title}
-                            className="blogImage"
-                        />
+                            className="blogImage"/>
                         <div className="blogContent">
-                            <p className="blogCategory">
-                                {blog.category}
-                            </p>
                             <h2>{blog.title}</h2>
-                            <p className="blogDescription">
-                                {blog.description}
-                            </p>
+                            <p className="blogDescription">{blog.description}</p>
                             <div className="blogFooter">
-                                <span>
-                                    {blog.date}
-                                </span>
-                                <button>
-                                    Read More →
-                                </button>
+                                <span>{blog.date}</span>
+                                <button>Read More →</button>
                             </div>
                         </div>
                     </article>

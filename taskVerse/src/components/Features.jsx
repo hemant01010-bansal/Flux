@@ -61,6 +61,11 @@ function Features(){
                 <p>We store your tasks so that you can see them later. </p>
             </div>
         </div>
+
+        <div className="startWork">
+            <p>Ready to Start Organize Your work</p>
+            <button>Let's Goo! <i className="fa-solid fa-arrow-right" style={{color: "#6254EA"}}></i></button>
+        </div>
         </>
     )
 }
