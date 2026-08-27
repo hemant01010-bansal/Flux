@@ -6,10 +6,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import About from './pages/About/About.jsx'
 import Blogs from './pages/Blogs/Blogs.jsx'
+import AuthLayout from '../AuthLayout.jsx'
+import LogIn from './pages/LogIn/LogIn.jsx'
+import SignUp from './pages/SignUp/SignUp.jsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    // path: '/',
     element: <Layout/>,
     children: [
       {
@@ -19,6 +22,19 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs/>
+      }
+    ]
+  },
+  {
+    element: <AuthLayout/>,
+    children:[
+      {
+        path: "/logIn",
+        element: <LogIn/>
+      },
+      {
+        path: "/signUp",
+        element: <SignUp/>
       }
     ]
   }

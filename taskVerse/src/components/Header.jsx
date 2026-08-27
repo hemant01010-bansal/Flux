@@ -49,8 +49,8 @@ function Header() {
                     <NavLink to="/blogs" className={({isActive})=>`${isActive ? "onPageLinkActive" : ""}`}>Blogs</NavLink>
                 </div>
                 <div className="syLogin">
-                    <button className="login">Login</button>
-                    <button className="signin">Sign Up</button>
+                    <NavLink to="/logIn"><button className="login">Login</button></NavLink>
+                    <NavLink to="/signUp"><button className="signin">Sign Up</button></NavLink>
                 </div>
                 <div className="headBar" onClick={()=> setisOpen(true)}><i className="fa-solid fa-bars" style={{ color: "rgb(255, 255, 255)" }}></i></div>
             </nav>
