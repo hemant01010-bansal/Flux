@@ -12,10 +12,10 @@ function Footer() {
 
                     <div className="footer-brand">
                         <NavLink to="/"><img src={logo} alt="Flux" className="logo" /></NavLink>
-                            <p className="footer-tagline">
-                                Stay organized, plan with confidence, and focus
-                                on what matters most — every single day.
-                            </p>
+                        <p className="footer-tagline">
+                            Stay organized, plan with confidence, and focus
+                            on what matters most — every single day.
+                        </p>
                     </div>
 
                     <div className="footer-links">
@@ -27,9 +27,10 @@ function Footer() {
 
                         <div className="footer-col">
                             <h4>Company</h4>
-                            <a href="#">About</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Contact</a>
+                            <NavLink to="/" className={({ isActive }) => `${isActive ? "onPageLinkActive" : ""}`}>About</NavLink>
+                            <NavLink to="/blogs" className={({ isActive }) => `${isActive ? "onPageLinkActive" : ""}`}>Blogs</NavLink><a href="#">Contact</a>
+                            <NavLink to="/home" className={({isActive})=>`${isActive ? "onPageLinkActive" : ""}`}>Home</NavLink>
+                            
                         </div>
 
                         <div className="footer-col">

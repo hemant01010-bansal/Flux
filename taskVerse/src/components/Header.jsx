@@ -39,13 +39,9 @@ function Header() {
             <nav>
                 <div className="logo"><NavLink to="/"><img src={logo} alt="Flux" className="logo" /></NavLink></div>
                 <div className="navLinks">
-                    {/* <a href="#">About</a>
-                    <a href="#">Help</a>
-                    <a href="#">Contact</a>
-                    <a href="blog.html">Blogs</a> */}
                     <NavLink to="/" className={({isActive})=>`${isActive ? "onPageLinkActive" : ""}`}>About</NavLink>
-                    {/* <NavLink to="/home">Home</NavLink>
-                    <NavLink to="/contact">Contanct</NavLink> */}
+                    <NavLink to="/home" className={({isActive})=>`${isActive ? "onPageLinkActive" : ""}`}>Home</NavLink>
+                    {/* <NavLink to="/contact">Contanct</NavLink> */}
                     <NavLink to="/blogs" className={({isActive})=>`${isActive ? "onPageLinkActive" : ""}`}>Blogs</NavLink>
                 </div>
                 <div className="syLogin">
