@@ -20,16 +20,29 @@
     transform: translateY(-2px);
 }
 
+.isCompleteTaskTime{
+    display: flex;
+    gap: 15px;
+}
+
+.isCompleted{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
 .taskValue {
     color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 700;
     padding-right: 15px;
 }
 
 .time_date{
     color: #9fa8c8;
     font-size: 15px;
+    font-weight: 500;
 }
 
 .buttons {
