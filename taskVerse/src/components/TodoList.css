@@ -27,6 +27,11 @@
     padding-right: 15px;
 }
 
+.time_date{
+    color: #9fa8c8;
+    font-size: 15px;
+}
+
 .buttons {
     display: flex;
     gap: 10px;
@@ -59,4 +64,19 @@
         margin-left: 4%;
         margin-right: 4%;
     }
+
+    .editTask{
+        /* width: 150px; */
+    }
+
+    .time_date{
+        font-size: 14px;
+    }
+}
+
+.editTask{
+    width: auto;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 18px;
 }

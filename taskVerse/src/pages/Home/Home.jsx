@@ -9,9 +9,16 @@ function Home(){
     useEffect(()=>{localStorage.setItem('todos',JSON.stringify(todos))},[todos])
 
     function addTodo(taskText){
-         setTodos([...todos, { task: taskText, id: Date.now() }])
-         console.log(Date.now().toLocaleString());
-         
+        let currTime=new Date().toLocaleString('en-US',{
+            day: 'numeric',
+            month: 'numeric',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        });
+        console.log(currTime);
+         setTodos([...todos, {task: taskText, id: currTime}])
     }
 
     function deleteTodo(idToRemove) {
@@ -25,6 +32,7 @@ function Home(){
             )
         );
     }
+
 
     return (
         <>

@@ -8,6 +8,10 @@ function TodoList({todo, onDelete, onEdit}){
 
     function handleEditClick() {
         if (isEditing) {
+            if (editValue==""){
+                alert("Task Can't be Empty!");
+                return;
+            }
             onEdit(todo.id, editValue);
         }
         setIsEditing(!isEditing);
@@ -16,15 +20,22 @@ function TodoList({todo, onDelete, onEdit}){
     return(
         <>
         <div className="task">
-            {isEditing ? (
-                <input
-                    className="taskValue"
-                    value={editValue}
-                    onChange={(e) => setEditValue(e.target.value)}
-                />
-            ) : (
-                <div className="taskValue">{todo.task}</div>
-            )}
+            <div>
+                {/* ternary operator */}
+                {/* show input field if user is editing task otherwise show task value */}
+                {isEditing ?  ( <input className="editTask" value={editValue} onChange={(e) => setEditValue(e.target.value)} 
+                onKeyDown={(e)=>{
+                    if (e.key==="Enter"){
+                        handleEditClick();
+                    }
+                }} 
+                /> ) : 
+                    ( <div className="taskValue">
+                        <p>{todo.task}</p>
+                    </div> )}
+                {/* show date and time when task is added */}
+                <p className="time_date">{todo.id}</p>
+            </div>
             <div className="buttons">
                 <button onClick={handleEditClick}>
                     {isEditing ? "Save" : "Edit"}
