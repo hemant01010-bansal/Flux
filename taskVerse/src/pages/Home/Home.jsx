@@ -5,9 +5,11 @@ import { useState,useEffect } from "react";
 
 function Home(){
     const [todos, setTodos]=useState(()=>JSON.parse(localStorage.getItem('todos')) || [])
+    const [completedTodos, setCompletedTodos]=useState(()=>JSON.parse(localStorage.getItem("completedTodos")) || [])
     //we take array of todo object in local variable 'todos' 
 
     useEffect(()=>{localStorage.setItem('todos',JSON.stringify(todos))},[todos])
+    useEffect(()=>{localStorage.setItem('completedTodos',JSON.stringify(completedTodos))}, [completedTodos])
     //most important line in this whole page
     //this line update 'todos' in local storage when we make any update in 'todos' array , this is function which only runs when our 'todos' is changed
 
@@ -16,15 +18,7 @@ function Home(){
 
 
     function addTodo(taskText){
-        let currTime=new Date().toLocaleString('en-US',{
-            day: 'numeric',
-            month: 'numeric',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-        });
-        console.log(currTime);
+        let currTime=new Date().toLocaleString();
         setTodos([...todos, {task: taskText, id: currTime, completedTime: null}])
     }
 
@@ -40,11 +34,20 @@ function Home(){
         );
     }
 
+    function completeTodo(todo, idToRemove){
+        let currTime=new Date().toLocaleString()
+        todo.completedTime=currTime;
+        setCompletedTodos([...completedTodos, todo])
+        setTodos(
+            todos.filter((todo) => todo.id!=idToRemove)
+        )
+    }
+
 
     return (
         <>
         <TodoForm onAdd={addTodo}/>
-        {todos.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo}></TodoList>)}
+        {todos.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo}></TodoList>)}
         </>
     )
 }
