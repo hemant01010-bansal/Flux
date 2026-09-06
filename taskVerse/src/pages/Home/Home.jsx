@@ -5,8 +5,15 @@ import { useState,useEffect } from "react";
 
 function Home(){
     const [todos, setTodos]=useState(()=>JSON.parse(localStorage.getItem('todos')) || [])
+    //we take array of todo object in local variable 'todos' 
 
     useEffect(()=>{localStorage.setItem('todos',JSON.stringify(todos))},[todos])
+    //most important line in this whole page
+    //this line update 'todos' in local storage when we make any update in 'todos' array , this is function which only runs when our 'todos' is changed
+
+
+    //When any of these 3 funcs run then they update the state of 'todos' (local var) and when 'todos' state is changed then we update it in local storage 
+
 
     function addTodo(taskText){
         let currTime=new Date().toLocaleString('en-US',{
@@ -18,7 +25,7 @@ function Home(){
             second: '2-digit',
         });
         console.log(currTime);
-         setTodos([...todos, {task: taskText, id: currTime}])
+        setTodos([...todos, {task: taskText, id: currTime, completedTime: null}])
     }
 
     function deleteTodo(idToRemove) {

@@ -24,7 +24,7 @@ function TodoList({todo, onDelete, onEdit}){
                 {/* checkbox to ask is task completed or not */}
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                     {/* when we use curly braces then we tell react to come out of html and enter to js and yellow curly braces is object which contains key value pair of css which is converted into css */}
-                    <input type="checkbox" className="isCompleted"/>
+                    <input type="checkbox" className="isCompleted" onClick={() => onDelete(todo.id)}/>
                 </div>
 
                 <div>

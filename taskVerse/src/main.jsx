@@ -10,6 +10,7 @@ import AuthLayout from '../AuthLayout.jsx'
 import LogIn from './pages/LogIn/LogIn.jsx'
 import SignUp from './pages/SignUp/SignUp.jsx'
 import Home from './pages/Home/Home.jsx'
+import HistoryLists from './pages/History/HistoryLists.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home/>
+      },
+      {
+        path: "/historyLists",
+        element: <HistoryLists/>
       }
     ]
   },
