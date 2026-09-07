@@ -4,13 +4,15 @@ import History from "../../components/History";
 function HistoryLists(){
     const [completedTodos, setCompletedTodos] = useState(()=>JSON.parse(localStorage.getItem("completedTodos")) || [])
 
+    function deleteCompletedTodo(todo,idToRemove){
+        setCompletedTodos(completedTodos.filter((todo)=> todo.id!=idToRemove))
+    }
+
     return(
         <>
-        {completedTodos.map((todo)=> {
-            console.log("one completed task added");
-            console.log(todo);
-            return <History todo={todo} key={todo.id}></History>
-        })}
+        <div style={{padding: '30px 20px 30px 20px'}}>
+            {completedTodos.map((todo)=> <History todo={todo} onDelete={deleteCompletedTodo} key={todo.id}></History>)}
+        </div>
         </>
     )
 }
