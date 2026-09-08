@@ -47,7 +47,15 @@ function Home(){
     return (
         <>
         <TodoForm onAdd={addTodo}/>
-        {todos.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo}></TodoList>)}
+        {todos.length!=0 ? todos.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo}></TodoList>) : (
+    <div style={{ textAlign: "center", marginTop: "60px", marginBottom: "100px", color: "#aeb9d4"}}>
+        <h2 style={{ color: "white", margin: "10px 0" }}>
+            You're all caught up!
+        </h2>
+        <p>No tasks for now. Add one above when you're ready.</p>
+    </div>
+)}
+        {/* {todos.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo}></TodoList>)} */}
         </>
     )
 }
