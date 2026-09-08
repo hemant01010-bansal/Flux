@@ -28,8 +28,9 @@ function Footer() {
                         <div className="footer-col">
                             <h4>Company</h4>
                             <NavLink to="/" className={({ isActive }) => `${isActive ? "onPageLinkActive" : ""}`}>About</NavLink>
-                            <NavLink to="/blogs" className={({ isActive }) => `${isActive ? "onPageLinkActive" : ""}`}>Blogs</NavLink><a href="#">Contact</a>
+                            <NavLink to="/blogs" className={({ isActive }) => `${isActive ? "onPageLinkActive" : ""}`}>Blogs</NavLink>
                             <NavLink to="/home" className={({isActive})=>`${isActive ? "onPageLinkActive" : ""}`}>Home</NavLink>
+                            <NavLink to="/historyLists" className={({isActive})=>`${isActive ? "onPageLinkActive" : ""}`}>History</NavLink>
                             
                         </div>
 
