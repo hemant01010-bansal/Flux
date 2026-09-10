@@ -116,10 +116,6 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
-    .feature-item .image {
-        order: -1;
-    }
 
     .content h1 {
         font-size: 40px;
