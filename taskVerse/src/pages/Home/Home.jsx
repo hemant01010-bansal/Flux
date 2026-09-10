@@ -41,6 +41,7 @@ function Home(){
         setTodos(
             todos.filter((todo) => todo.id!=idToRemove)
         )
+        alert("🎉One Task is completed!");
     }
 
 
