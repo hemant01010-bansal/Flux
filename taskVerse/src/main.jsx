@@ -13,12 +13,13 @@ import Home from './pages/Home/Home.jsx'
 import HistoryLists from './pages/History/HistoryLists.jsx'
 
 const router = createBrowserRouter([
-  {
-    // path: '/',
+  { //route object
     element: <Layout/>,
     children: [
       {
-        path: "",
+        path: "/",  //this is imp because when browser by default loads '/' the root URL when the apps start
+        //if i comment out this 1st object then browser give me error because in 2nd object i doesn't define 
+        //the route for path '/'
         element: <About/>
       },
       {

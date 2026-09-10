@@ -7,7 +7,7 @@ function Layout(){
     return (
         <>
         <Header/>
-        <Outlet/>
+        <Outlet/>  {/* what ever the router send that render here */}
         <Footer/>
         </>
     )
