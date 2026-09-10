@@ -32,7 +32,7 @@ function LogIn() {
                     </div>
 
                     <div className="login-with-google">
-                        <p><i class="fa-brands fa-google" style={{color: "rgb(255, 255, 255)"}}></i>Continue with Google</p>
+                        <p><i className="fa-brands fa-google" style={{color: "rgb(255, 255, 255)"}}></i>Continue with Google</p>
                     </div>
 
                     <div className="show-signup">
