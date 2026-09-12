@@ -20,9 +20,9 @@ function Footer() {
 
                     <div className="footer-links">
                         <div className="footer-col">
-                            <h4>Product</h4>
-                            <a href="#">Features</a>
-                            <a href="#">Pricing</a>
+                            <h4>Register</h4>
+                            <NavLink to="/logIn">LogIn</NavLink>
+                            <NavLink to="/signUp">SignUp</NavLink>
                         </div>
 
                         <div className="footer-col">
