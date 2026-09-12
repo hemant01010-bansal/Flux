@@ -31,7 +31,7 @@ function Banner() {
                 console.log(next);
                 return next;
             })
-        }, 5000);
+        }, 4000);
     }, [])
 
     return (
