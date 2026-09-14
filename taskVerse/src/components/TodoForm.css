@@ -3,19 +3,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 40px;
     gap: 20px;
 }
 
 .addTask input{
-    height: 45px;
+    height: 40px;
     width: 40%;
     min-width: 280px;
     padding: 5px;
     font-size: 20px;
     border-radius: 8px;
     border: none;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* box-shadow: 1px 1px 5px #ffffff, -1px -1px 5px #ffffff; */
+    font-weight: 500;
 }
 
 .addTask button{
@@ -30,8 +33,8 @@
 }
 
 .addTask input:focus{
-    box-shadow: 3px 3px 5px #6254EA, -3px -3px 5px #6254EA;
-    border: none;
+    box-shadow: 2px 2px 5px #6254EA, -2px -2px 5px #6254EA;
+    border: 3px solid #6254EA;
     outline: none;
 }
 
