@@ -7,7 +7,7 @@ function LogIn() {
     return (
         <div className="login-page">
 
-            <img src={logo} alt="Flux Logo" className="flux-logo" />
+            <NavLink to="/"><img src={logo} alt="Flux Logo" className="flux-logo" /></NavLink>
 
             <div className="final-div">
                 <div className="login-container">

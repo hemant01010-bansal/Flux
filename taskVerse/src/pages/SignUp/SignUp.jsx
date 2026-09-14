@@ -8,7 +8,7 @@ function SignUp() {
         <>
             <div className="signup-page">
 
-                <img src={logo} alt="Flux Logo" className="flux-logo" />
+                <NavLink to="/"><img src={logo} alt="Flux Logo" className="flux-logo" /></NavLink>
 
                 <div className="final-div">
                     <div className="signup-container">
@@ -39,7 +39,7 @@ function SignUp() {
 
                         <div className="show-signup">
                             <p>Already have an account?</p>
-                            <NavLink to="/signup">Log in</NavLink>
+                            <NavLink to="/logIn">Log in</NavLink>
                         </div>
 
                     </div>
