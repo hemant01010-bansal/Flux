@@ -23,23 +23,34 @@ function TodoList({todo, onDelete, onEdit, onComplete}){
             <div className="isCompleteTaskTime">
                 {/* checkbox to ask is task completed or not */}
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    {/* when we use curly braces then we tell react to come out of html and enter to js and yellow curly braces is object which contains key value pair of css which is converted into css */}
+                    {/* when we use curly braces then we tell react to come out of html and enter to js and 
+                    yellow curly braces is object which contains key value pair of css which is converted 
+                    into css */}
                     <input type="checkbox" className="isCompleted" onClick={() => onComplete(todo,todo.id)}/>
                 </div>
 
                 <div>
                     {/* ternary operator */}
                     {/* show input field if user is editing task otherwise show task value */}
-                    {isEditing ?  ( <input className="editTask" value={editValue} onChange={(e) => setEditValue(e.target.value)} 
-                    onKeyDown={(e)=>{
-                        if (e.key==="Enter"){
-                            handleEditClick();
-                        }
-                    }} 
-                    /> ) : 
-                        ( <div className="taskValue">
-                            <p>{todo.task}</p>
-                        </div> )}
+                    {isEditing ?    
+                        (
+                        <input className="editTask" 
+                            value={editValue} 
+                            onChange={(e) => setEditValue(e.target.value)} 
+                            onKeyDown={(e)=>{
+                                if (e.key==="Enter"){
+                                    handleEditClick();
+                                }
+                            }} 
+                        />
+                        ) 
+                    : 
+                        ( 
+                            <div className="taskValue">
+                                <p>{todo.task}</p>
+                            </div> 
+                        )
+                    }
 
                     {/* show date and time when task is added */}
                     <p className="time_date">{todo.id}</p>
