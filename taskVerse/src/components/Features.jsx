@@ -44,26 +44,26 @@ function Features(){
         <div className="adCards">
             <div className="adCard">
                 <div className="adCardIcon"><i className="fa-solid fa-play" style={{color: "rgb(255, 255, 255)"}}></i></div>
-                <h2>Intuitive</h2>
-                <p>orem impus faclkl jasfdkljeoi </p>
+                <h2>Easy to Use</h2>
+                <p>Add and manage your tasks quickly with a simple and intuitive interface.</p>
             </div>
 
             <div className="adCard">
                 <div className="adCardIcon"><i className="fa-solid fa-arrow-trend-up" style={{color: "rgb(255, 255, 255)"}}></i>
                 </div>
-                <h2>Visual Progress</h2>
-                <p>orem impus faclkl jasfdkljeoi </p>
+                <h2>Track Your Progress</h2>
+                <p>Keep track of completed tasks and stay focused on your daily goals.</p>
             </div>
 
             <div className="adCard">
                 <div className="adCardIcon"><i className="fa-solid fa-database" style={{color: "rgb(255, 255, 255)"}}></i></div>
-                <h2>Store ur tasks</h2>
-                <p>We store your tasks so that you can see them later. </p>
+                <h2>Task History</h2>
+                <p>View your completed tasks & keep a record of it.</p>
             </div>
         </div>
 
         <div className="startWork">
-            <p>Ready to Start Organize Your work</p>
+            <div><p>Ready to Start Organize Your work</p></div>
             <button>Let's Goo! <i className="fa-solid fa-arrow-right" style={{color: "#6254EA"}}></i></button>
         </div>
         </>
