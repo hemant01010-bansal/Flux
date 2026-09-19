@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LogIn.css";
 import logo from "../../images/exportImages";
 import { NavLink } from "react-router-dom";
 
 function LogIn() {
+    const [pass, setPass] = useState('');
+
+    function isValid(){
+
+    }
+
+
     return (
         <div className="login-page">
 
@@ -19,7 +26,7 @@ function LogIn() {
                         <input type="email" className="input-email" placeholder="Email" autoComplete="email" />
 
                         <div className="password-div">
-                            <input className="input-password" type="password" placeholder="Password" autoComplete="current-password" />
+                            <input className="input-password" type="password" placeholder="Password" autoComplete="current-password" value={pass} onChange={(e)=>{setPass(e.target.value)}}/>
                         </div>
 
                         <button type="submit" className="login-btn">
