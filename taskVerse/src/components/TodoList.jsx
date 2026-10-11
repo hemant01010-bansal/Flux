@@ -58,10 +58,11 @@ function TodoList({todo, onDelete, onEdit, onComplete}){
             </div>
 
             <div className="buttons">
+                <button className="pin">Pin</button>
                 <button onClick={handleEditClick}>
                     {isEditing ? "Save" : "Edit"}
                 </button>
-                <button onClick={() => onDelete(todo.id)}>Delete</button>
+                <button onClick={() => onDelete(todo.id)}><i class="fa-regular fa-trash-can" style={{color: "rgb(243, 245, 247)", fontSize: "20px"}}></i></button>
             </div>
         </div>
         </>
