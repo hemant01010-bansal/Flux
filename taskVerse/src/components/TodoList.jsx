@@ -2,7 +2,7 @@ import React from "react";
 import './TodoList.css'
 import { useState } from "react";
 
-function TodoList({todo, onDelete, onEdit, onComplete}){
+function TodoList({todo, onDelete, onEdit, onComplete, onPinUnPin}){
     const [isEditing, setIsEditing] = useState(false);
     const [editValue, setEditValue] = useState(todo.task);
 
@@ -19,7 +19,7 @@ function TodoList({todo, onDelete, onEdit, onComplete}){
 
     return(
         <>
-        <div className="task">
+        <div className={`task ${todo.pin==true ? "taskPin":""}`}>
             <div className="isCompleteTaskTime">
                 {/* checkbox to ask is task completed or not */}
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -47,7 +47,7 @@ function TodoList({todo, onDelete, onEdit, onComplete}){
                     : 
                         ( 
                             <div className="taskValue">
-                                <p>{todo.task}</p>
+                                <p>{todo.task}<span style={{paddingLeft: "10px", fontSize: "12px", color: "#F59E0B"}}>{todo.pin==true ? "Pinned":""}</span></p>
                             </div> 
                         )
                     }
@@ -58,11 +58,11 @@ function TodoList({todo, onDelete, onEdit, onComplete}){
             </div>
 
             <div className="buttons">
-                <button className="pin">Pin</button>
+                <button onClick={()=>onPinUnPin(todo.id)} className="pin">Pin</button>
                 <button onClick={handleEditClick}>
                     {isEditing ? "Save" : "Edit"}
                 </button>
-                <button onClick={() => onDelete(todo.id)}><i class="fa-regular fa-trash-can" style={{color: "rgb(243, 245, 247)", fontSize: "20px"}}></i></button>
+                <button onClick={() => onDelete(todo.id)}><i className="fa-regular fa-trash-can" style={{color: "rgb(243, 245, 247)", fontSize: "20px"}}></i></button>
             </div>
         </div>
         </>
