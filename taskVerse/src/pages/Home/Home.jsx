@@ -19,7 +19,7 @@ function Home(){
 
     function addTodo(taskText){
         let currTime=new Date().toLocaleString();
-        setTodos([...todos, {task: taskText, id: currTime, completedTime: null}])
+        setTodos([{task: taskText, id: currTime, completedTime: null, pin: false}, ...todos])
     }
 
     function deleteTodo(idToRemove) {
@@ -44,6 +44,12 @@ function Home(){
         alert("🎉One Task is completed!");
     }
 
+    function pinUnpinTodo(idToPin){
+        setTodos(todos.map((todo)=>todo.id===idToPin ? {...todo, pin: !todo.pin} : todo))
+    }
+
+    const pinTasks = todos.filter((todo)=>todo.pin==true) 
+    const unpinTasks = todos.filter((todo)=>todo.pin==false) 
 
     return (
         <>
@@ -51,10 +57,24 @@ function Home(){
 
         {todos.length!=0 ? 
             //show tasks
-            todos.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo}></TodoList>)
 
+            //these are statements (perform some action have nothing to returned)
+            // {
+            //     // todos.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo} onPinUnPin={pinUnpinTodo}></TodoList>)
+            //     const pinTasks = todos.filter((todo)=>todo.pin==true)
+            //     const unpinTasks = todos.filter((todo)=>todo.pin==false)
+            //     // pinTasks.m
+            // }
+            
+            (
+                <>
+                {pinTasks.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo} onPinUnPin={pinUnpinTodo}></TodoList>)}
+                {unpinTasks.map((todo)=> <TodoList key={todo.id} todo={todo} onDelete={deleteTodo} onEdit={editTodo} onComplete={completeTodo} onPinUnPin={pinUnpinTodo}></TodoList>)}
+                </>
+            )
             : 
 
+            //the whole code inside parantheses get returned and displayed
             (   //show a message if user has no task
                 <div style={{ textAlign: "center", marginTop: "60px", marginBottom: "100px", color: "#aeb9d4"}}>
                     <h2 style={{ color: "white", margin: "10px 0" }}>
