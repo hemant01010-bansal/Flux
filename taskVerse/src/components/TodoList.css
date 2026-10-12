@@ -15,9 +15,17 @@
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
+.taskPin{
+    border: 2px solid #F59E0B;
+}
+
 .task:hover {
     border-color: #6254EA;
     transform: translateY(-2px);
+}
+
+.taskPin:hover{
+    border: 2px solid #F59E0B;
 }
 
 .isCompleteTaskTime{
