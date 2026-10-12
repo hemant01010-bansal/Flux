@@ -7,15 +7,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     padding: 14px 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 12px;
     box-sizing: border-box;
-    margin-bottom: 12px;
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.taskPin{
+.taskPin {
     border: 2px solid #F59E0B;
 }
 
@@ -24,20 +25,27 @@
     transform: translateY(-2px);
 }
 
-.taskPin:hover{
-    border: 2px solid #F59E0B;
+.taskPin:hover {
+    border-color: #F59E0B;
 }
 
-.isCompleteTaskTime{
+.isCompleteTaskTime {
     display: flex;
     gap: 15px;
+    flex: 1;
+    min-width: 0;
 }
 
-.isCompleted{
+.isCompleted {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.taskContent {
+    flex: 1;
+    min-width: 0;
 }
 
 .taskValue {
@@ -45,9 +53,10 @@
     font-size: 20px;
     font-weight: 700;
     padding-right: 15px;
+    overflow-wrap: anywhere;
 }
 
-.time_date{
+.time_date {
     padding-top: 10px;
     color: #9fa8c8;
     font-size: 15px;
@@ -72,7 +81,7 @@
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.buttons .pin{
+.buttons .pin {
     background-color: #F59E0B;
     border: 2px solid #F59E0B;
 }
@@ -82,7 +91,7 @@
     color: #6254EA;
 }
 
-.buttons .pin:hover{
+.buttons .pin:hover {
     color: #F59E0B;
 }
 
@@ -90,20 +99,64 @@
     transform: scale(0.95);
 }
 
-@media (max-width: 768px){
-    .task{
-        margin-left: 4%;
-        margin-right: 4%;
+.editTask {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .task {
+        width: 92%;
+        flex-direction: column;
+        /* align-items: stretch; */
+        padding: 12px 14px;
     }
 
-    .time_date{
+    .isCompleteTaskTime {
+        width: 100%;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .buttons button {
+        flex: 1;
+        padding: 8px 0;
+    }
+
+    .buttons button:hover {
+        color: white;
+    }
+
+    .time_date {
         font-size: 14px;
     }
 }
 
-.editTask{
-    width: auto;
-    border-radius: 8px;
-    padding: 8px;
-    font-size: 18px;
+@media (max-width: 480px) {
+    .taskValue {
+        font-size: 17px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+    }
+
+    .buttons button:hover {
+        color: white;
+    }
+
+    .editTask {
+        font-size: 16px;
+    }
+}
+
+@media (hover: none) {
+    .task:hover {
+        transform: none;
+    }
 }
