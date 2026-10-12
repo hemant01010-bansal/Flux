@@ -28,7 +28,6 @@ function Banner() {
         const interval = setInterval(() => {
             setInd((prev) => {
                 const next = prev === 4 ? 0 : prev + 1;
-                console.log(next);
                 return next;
             })
         }, 3000);
