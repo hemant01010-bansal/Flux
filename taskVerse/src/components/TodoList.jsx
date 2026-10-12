@@ -58,7 +58,7 @@ function TodoList({todo, onDelete, onEdit, onComplete, onPinUnPin}){
             </div>
 
             <div className="buttons">
-                <button onClick={()=>onPinUnPin(todo.id)} className="pin">Pin</button>
+                <button onClick={()=>onPinUnPin(todo.id)} className="pin">{todo.pin==true ? "UnPin": "Pin   "}</button>
                 <button onClick={handleEditClick}>
                     {isEditing ? "Save" : "Edit"}
                 </button>
