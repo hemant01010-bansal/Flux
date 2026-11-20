@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import './TodoList.css'
 import { useState } from "react";
+import ConfirmComplete from "./ConfirmComplete";
+import { createPortal } from "react-dom";
+
 
 function TodoList({todo, onDelete, onEdit, onComplete, onPinUnPin}){
     const [isEditing, setIsEditing] = useState(false);
     const [editValue, setEditValue] = useState(todo.task);
+    const [showConfirm, setShowConfirm] = useState(false);
+    const inputRef = useRef(null);
 
     function handleEditClick() {
         if (isEditing) {
@@ -26,7 +31,25 @@ function TodoList({todo, onDelete, onEdit, onComplete, onPinUnPin}){
                     {/* when we use curly braces then we tell react to come out of html and enter to js and 
                     yellow curly braces is object which contains key value pair of css which is converted 
                     into css */}
-                    <input type="checkbox" className="isCompleted" onClick={() => onComplete(todo,todo.id)}/>
+                    <input type="checkbox" 
+                        className="isCompleted" 
+                        ref={inputRef}
+                        onClick={() =>  {setShowConfirm(true)}}
+                    />
+
+                    {showConfirm && createPortal(
+                        <ConfirmComplete
+                            onConfirm={() => {
+                                onComplete(todo, todo.id);
+                                setShowConfirm(false);
+                            }}
+                            onCancel={() => {
+                                setShowConfirm(false);
+                                inputRef.current.checked = false;
+                            }}
+                        />,
+                        document.body
+                    )}
                 </div>
 
                 <div>
