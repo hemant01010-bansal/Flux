@@ -1,0 +1,63 @@
+/* Full-screen dark overlay */
+.confirmParent{
+    position: fixed;
+    inset: 0;                         /* top/right/bottom/left = 0 */
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* stays above the rest of the page */
+}
+
+/* The card in the middle */
+.confirmBox{
+    width: 340px;
+    padding: 24px;
+    background-color: #161F30;       /* your card colour */
+    border: 2px solid #6254EA;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.confirmBox p{
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Buttons row */
+.confirmButtons{
+    display: flex;
+    gap: 12px;
+}
+
+.confirmButtons button{
+    padding: 10px 28px;
+    border-radius: 8px;
+    border: 2px solid #6254EA;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.confirmButtons button:hover{
+    opacity: 0.85;
+}
+
+.confirmButtons button:active{
+    transform: scale(0.96);
+}
+
+.btnYes{
+    background-color: #6254EA;
+    color: #ffffff;
+}
+
+.btnNo{
+    background-color: transparent;
+    color: #9fa8c8;                   /* your light link colour */
+}
